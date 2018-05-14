@@ -4,6 +4,8 @@ import environment from './environment';
 import {PLATFORM} from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
 
+import './assets/styles/application.scss';
+
 import { initialState as clientInitialState } from './common/store/state';
 
 let initialState = clientInitialState;
