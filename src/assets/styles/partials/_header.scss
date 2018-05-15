@@ -1,7 +1,30 @@
 .main-header {
   background: #FFFFFF;
+  border-bottom: 1px solid #e9e7e7;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .05);
+  font-size: 1.6rem;
+  height: 60px;
   left: 0;
   position: fixed;
   top: 0;
+  width: 100%;
   z-index: z("header");
+
+  & > .container {
+      height: 100%;
+
+      & > .grid {
+          height: 100%;
+      }
+  }
+}
+
+.main-header__logo {
+    color: $green;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.main-header__links {
+    text-align: right;
 }
