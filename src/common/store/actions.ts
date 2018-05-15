@@ -1,49 +1,64 @@
-import { Container } from 'aurelia-dependency-injection';
-import { Api } from '../../services/api';
+import { getAccounts } from '../helpers/steem/accounts';
+import { Container } from 'aurelia-framework';
+import { getDiscussionsByFeed } from '../helpers';
 
-const api = Container.instance.get(Api);
+export async function loadAccounts(state, names) {
+    const accounts = await getAccounts(names);
 
-export async function getAccount(state, name) {
-  // Get user account and load data
-  return {...state, ...{}};
+    return {...state, ...{ accounts } };
 }
 
-export async function getPosts(state) {
-  return {...state, ...{}}
+export async function loadAccount(state, name) {
+    // Get user account and load data
+    const fetchedAccount = await getAccounts([ name ]);
+
+    let account = null;
+
+    if (fetchedAccount.length) {
+        account = fetchedAccount[0];
+    }
+
+    return { ...state, ...{ account } };
 }
 
-export async function getPostContent(state, author, permlink) {
-  return {...state, ...{}};
+export async function loadFeed(state, name) {
+    const posts = await getDiscussionsByFeed({ tag: name, limit: 100 });
+
+    return { ...state, ... { posts } };
 }
 
-export async function getFeed(state) {
-  return {...state, ...{}};
+export async function loadPosts(state) {
+    return { ...state, ...{} }
 }
 
-export async function getFeedContent(state, sortBy = 'trending', category, limit = 20) {
-  return {...state, ...{}};
+export async function loadPostContent(state, author, permlink) {
+    return { ...state, ...{} };
 }
 
-export async function getMoreFeedContent(state, sortBy, category, limit = 20) {
-  return {...state, ...{}};
+export async function loadFeedContent(state, sortBy = 'trending', category, limit = 20) {
+    return { ...state, ...{} };
 }
 
-export async function getUserComments(state, username, limit = 20) {
-  return {...state, ...{}};
+export async function loadMoreFeedContent(state, sortBy, category, limit = 20) {
+    return { ...state, ...{} };
 }
 
-export async function getMoreUserComments(state, username, limit = 20) {
-  return {...state, ...{}};
+export async function loadUserComments(state, username, limit = 20) {
+    return { ...state, ...{} };
+}
+
+export async function loadMoreUserComments(state, username, limit = 20) {
+    return { ...state, ...{} };
 }
 
 export async function setSelectedProject(state, projectId) {
-    return {...state, ...{ projectId }};
+    return { ...state, ...{ projectId } };
 }
 
 export async function setUser(state, user) {
-    return {...state, ...{ user }};
+    return { ...state, ...{ user } };
 }
 
 export function setCategory(state, currentCategory) {
-    return {...state, ...{ currentCategory }};
+    return { ...state, ...{ currentCategory } };
 }

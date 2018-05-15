@@ -1,7 +1,25 @@
-@import "./config/site";
+@import "./config/index";
+@import "./functions/index";
 @import "./grid/reflex";
+
+@import "./partials/index";
 
 * {
   box-sizing: border-box;
   position: relative;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: $base-font-size;
+}
+
+body {
+  background: $bg-colour;
+  font-family: $sans-serif-font-family;
 }

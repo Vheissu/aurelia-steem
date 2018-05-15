@@ -1,7 +1,7 @@
 import { PLATFORM } from 'aurelia-pal';
 import { RouterConfiguration, Router } from 'aurelia-router';
 
-export class UserIndex {
+export class User {
   private router: Router;
 
   configureRouter(config: RouterConfiguration, router: Router) {

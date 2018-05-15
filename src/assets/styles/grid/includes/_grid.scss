@@ -51,12 +51,10 @@
     padding: 0;
     margin: 0 auto;
     position: relative;
-    @include setup-whitespace();
 
     &::before,
     &::after {
         @include box-sizing(border-box);
-        @include reset-whitespace();
     }
 
     // handle when lists are used as a grid
@@ -69,7 +67,6 @@
 
 [class^="#{$reflex-prefix}col-"] {
     @include box-sizing(border-box);
-    @include reset-whitespace();
     position: relative;
     width: 100%;
     vertical-align: top;
@@ -78,7 +75,6 @@
     &::before,
     &::after {
         @include box-sizing(border-box);
-        @include reset-whitespace();
     }
 
     // handle grids nested in columns

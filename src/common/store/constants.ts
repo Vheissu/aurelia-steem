@@ -1,1 +1,3 @@
-export const GET_POSTS = 'getPosts';
+export const LOAD_POSTS = 'loadPosts';
+export const LOAD_ACCOUNTS = 'loadAccounts';
+export const LOAD_FEED = 'loadFeed';
