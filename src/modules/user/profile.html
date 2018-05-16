@@ -1,3 +1,43 @@
 <template>
-  <h1>Profile</h1>
+    <require from="resources/value-converters/reputation"></require>
+
+    <header class="hero-header">
+        <div class="container" layout="row center-left">
+            <div class="hero-header__left">
+                <img class="avatar avatar--large" src="https://img.busy.org/@${user.name}">
+            </div>
+
+            <div class="hero-header__right">
+                <h3 class="hero-header__username">${user.name} (${user.reputation | reputation})
+                    <a href="#" class="button button--small button--follow">Follow</a>
+                </h3>
+                <p class="hero-header__blurb">${profile.about}</p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navigation navigation--profile">
+        <div class="container">
+            <ul class="navigation__list">
+                <li repeat.for="row of router.navigation" class="navigation__list__item ${row.isActive ? 'active' : ''}">
+                    <a class="navigation__list__link" href.bind="row.href">${row.title}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="grid">
+            <div class="col-sm-3 col-lg-2"></div>
+            <div class="col-sm-9 col-lg-8">
+                <section>
+                    <article repeat.for="post of posts">
+                        <header>
+                            <h1>${post.title}</h1>
+                        </header>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
 </template>

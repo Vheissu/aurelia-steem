@@ -42,13 +42,6 @@ export class User {
         title: 'Reblogs'
       },
       {
-        route: '/feed',
-        moduleId: PLATFORM.moduleName('./feed'),
-        name: 'user-feed',
-        nav: true,
-        title: 'Feed'
-      },
-      {
         route: '/transfers',
         moduleId: PLATFORM.moduleName('./transfers'),
         name: 'user-transfers',

@@ -1321,6 +1321,26 @@
   text-align: right;
 }
 
+.navigation__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation__list__item {
+  font-size: 1.8rem;
+  list-style: none;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+.navigation__list__link {
+  color: inherit;
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
   position: relative;
@@ -1339,5 +1359,9 @@ html {
 body {
   background: #F9F9F9;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+router-view {
+  margin-top: 80px;
 }
 /*# sourceMappingURL=application.css.map */

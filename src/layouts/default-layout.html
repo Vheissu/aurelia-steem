@@ -1,17 +1,18 @@
 <template>
     <header class="main-header">
-        <div class="container">
-            <div class="grid">
-                <div class="col-2 main-header__logo">AureliaSteem</div>
-                <div class="col-6">
-                    <input type="text" placeholder="Search for something....">
-                </div>
-                <div class="col-4 main-header__links">
-                    <a href="#">Sign up</a> | <a href="#">Log In</a>
-                </div>
+        <div class="container" layout="row center-justify">
+            <div class="main-header__logo"><span>Aurelia</span>Steem</div>
+
+            <div class="main-header__search">
+                <input type="text" placeholder="Search for something....">
+            </div>
+
+            <div class="main-header__links">
+                <a href="#">Sign up</a> |
+                <a href="#">Log In</a>
             </div>
         </div>
     </header>
-    
+
     <slot></slot>
 </template>

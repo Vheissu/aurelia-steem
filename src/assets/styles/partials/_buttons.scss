@@ -1,0 +1,24 @@
+.button {
+    appearance: none;
+    border: 1px solid transparent;
+    background: $button-base-colour;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.button--small {
+    height: 30px;
+    line-height: 26px;
+    padding: 0 15px;
+}

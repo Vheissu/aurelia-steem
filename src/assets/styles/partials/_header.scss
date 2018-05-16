@@ -3,7 +3,7 @@
   border-bottom: 1px solid #e9e7e7;
   box-shadow: 0 0 4px rgba(0, 0, 0, .05);
   font-size: 1.6rem;
-  height: 60px;
+  height: $main-header-height;
   left: 0;
   position: fixed;
   top: 0;
@@ -20,11 +20,30 @@
 }
 
 .main-header__logo {
-    color: $green;
+    color: $primary-colour;
     font-size: 2rem;
     font-weight: bold;
+    width: 165px;
 }
 
 .main-header__links {
     text-align: right;
 }
+
+.hero-header {
+    background: #F3F4F6;
+    padding: 20px 0;
+}
+
+    .hero-header__left {
+        margin-right: 20px;
+    }
+
+        .hero-header__username {
+            font-size: 2.8rem;
+            margin: 0;
+        }
+
+        .hero-header__blurb {
+            font-size: 1.6rem;
+        }

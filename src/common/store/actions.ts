@@ -1,6 +1,11 @@
-import { getAccounts } from '../helpers/steem/accounts';
 import { Container } from 'aurelia-framework';
-import { getDiscussionsByFeed } from '../helpers';
+import { getAccounts, vote, getDiscussionsByFeed } from '../helpers';
+
+export async function castVote(state, wif, voter, author, permlink, weight) {
+    const castedVoted = await vote(wif, voter, author, permlink, weight);
+
+    return state;
+}
 
 export async function loadAccounts(state, names) {
     const accounts = await getAccounts(names);

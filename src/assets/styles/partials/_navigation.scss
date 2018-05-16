@@ -1,0 +1,24 @@
+.navigation {
+    background: #FFF;
+    padding: 15px 0;
+}
+
+    .navigation__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        .navigation__list__item {
+            font-size: 1.8rem;
+            list-style: none;
+            margin: 0 25px 0 0;
+            padding: 0;
+        }
+
+            .navigation__list__link {
+                color: inherit;
+                text-decoration: none;
+            }

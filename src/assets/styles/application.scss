@@ -23,3 +23,9 @@ body {
   background: $bg-colour;
   font-family: $sans-serif-font-family;
 }
+
+router-view {
+    display: block;
+    margin-top: $main-header-height;
+}
+@import "./flex-layout-attribute.min.css";
