@@ -1,3 +1,17 @@
 <template>
-  <h1>Aurelia Steem</h1>
+    <div class="container">
+        <div class="grid">
+            <div class="col-sm-3 col-lg-2"></div>
+            <div class="col-sm-9 col-lg-8">
+                <section>
+                    <h2>What's trending...</h2>
+                    <article repeat.for="post of posts">
+                        <header>
+                            <h1>${post.title}</h1>
+                        </header>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </div>
 </template>

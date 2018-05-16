@@ -12,5 +12,6 @@ export const ApplicationRoutes = [
     { route: 'edit-profile', name: 'edit-profile', moduleId: PLATFORM.moduleName('modules/edit-profile/edit-profile', 'edit-profile'), title: 'Edit Profile', nav: true },
     { route: 'invite', name: 'invite', moduleId: PLATFORM.moduleName('modules/invite/invite', 'invite'), title: 'Invite', nav: true },
     { route: 'notifications', name: 'notifications', moduleId: PLATFORM.moduleName('modules/notifications/notifications', 'notifications'), title: 'Notifications', nav: true },
+    { route: ':username/:slug', name: 'view-post', moduleId: PLATFORM.moduleName('modules/content/content'), title: 'Post', nav: false },
     { route: 'user/:name', name: 'user', moduleId: PLATFORM.moduleName('modules/user/user'), title: 'User', nav: false }
 ];

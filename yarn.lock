@@ -9087,6 +9087,13 @@ sax@>=0.6.0, sax@^1.2.4, sax@~1.2.1:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
 
+sc2-sdk@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/sc2-sdk/-/sc2-sdk-1.0.2.tgz#6a83d8a55d50ef5c861f80c84da433e4e29fcf56"
+  dependencies:
+    cross-fetch "^1.1.1"
+    debug "^2.2.0"
+
 schema-utils@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-0.3.0.tgz#f5877222ce3e931edae039f17eb3716e7137f8cf"

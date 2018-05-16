@@ -1,5 +1,44 @@
 import { Container } from 'aurelia-framework';
-import { getAccounts, vote, getDiscussionsByFeed } from '../helpers';
+import { getAccounts, vote, getDiscussionsByFeed, getDiscussionsByTrending } from '../helpers';
+
+export function setUser(state, accessToken, tokenExpires, username) {
+    return { ...state, ...{ accessToken, tokenExpires, username } };
+}
+
+export function clearUser(state) {
+    return { ...state, ...{
+        accessToken: '',
+        tokenExpires: '',
+        username: '',
+        profile: {
+            about: '',
+            coverImage: '',
+            location: '',
+            name: '',
+            profileImage: '',
+            rep: '',
+            balance: ''
+        }
+    } };
+}
+
+export function setProfile(state, social, name, profileImage, about, location, coverImage, rep, balance) {
+    return { ...state, ...{ profile: about, coverImage, location, name, profileImage, rep, social, balance } };
+}
+
+export function setNewPost(state, newPost) {
+    return { ...state, ...{ newPost } };
+}
+
+export function resetNewPost(state) {
+    return { ...state, ...{ 
+        newPost: {
+            title: '',
+            body: '',
+            tags: ''
+        } 
+    } };
+}
 
 export async function castVote(state, wif, voter, author, permlink, weight) {
     const castedVoted = await vote(wif, voter, author, permlink, weight);
@@ -24,6 +63,11 @@ export async function loadAccount(state, name) {
     }
 
     return { ...state, ...{ account } };
+}
+
+export async function loadTrending(state) {
+    const trendingPosts = await getDiscussionsByTrending({ limit: 25 });
+    return { ...state, ...{ posts: trendingPosts } };
 }
 
 export async function loadFeed(state, name) {
@@ -58,12 +102,4 @@ export async function loadMoreUserComments(state, username, limit = 20) {
 
 export async function setSelectedProject(state, projectId) {
     return { ...state, ...{ projectId } };
-}
-
-export async function setUser(state, user) {
-    return { ...state, ...{ user } };
-}
-
-export function setCategory(state, currentCategory) {
-    return { ...state, ...{ currentCategory } };
 }

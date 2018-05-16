@@ -7,8 +7,8 @@ import { Store, connectTo } from 'aurelia-store';
 import { ApplicationRoutes } from './common/routes';
 
 import { State } from './common/store/state';
-import { CAST_VOTE, LOAD_POSTS, LOAD_ACCOUNTS, LOAD_ACCOUNT } from 'common/store/constants';
-import { castVote, loadAccounts, loadAccount, loadFeed, loadPosts } from 'common/store/actions';
+import { CAST_VOTE, LOAD_POSTS, LOAD_ACCOUNTS, LOAD_ACCOUNT, LOAD_TRENDING } from 'common/store/constants';
+import { castVote, loadAccounts, loadAccount, loadFeed, loadPosts, loadTrending } from 'common/store/actions';
 
 @autoinject()
 export class App {
@@ -20,6 +20,7 @@ export class App {
         this.store.registerAction(LOAD_ACCOUNT, loadAccount);
         this.store.registerAction(LOAD_FEED, loadFeed);
         this.store.registerAction(CAST_VOTE, castVote);
+        this.store.registerAction(LOAD_TRENDING, loadTrending);
     }
 
     configureRouter(config: RouterConfiguration, router: Router) {

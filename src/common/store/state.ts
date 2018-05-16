@@ -3,11 +3,45 @@ export interface State {
     account: any;
     tags: any[];
     posts: any[];
+    accessToken: string;
+    tokenExpires: string;
+    username: string;
+    profile: {
+        balance: string;
+        about: string;
+        coverImage: string;
+        location: string;
+        name: string;
+        profileImage: string;
+        rep: string;
+    },
+    newPost: {
+        title: string;
+        body: string;
+        tags: string;
+    }
 }
 
 export const initialState: State = {
     accounts: [],
     account: {},
     tags: [],
-    posts: []
+    posts: [],
+    accessToken: '',
+    tokenExpires: '',
+    username: '',
+    profile: {
+        balance: '',
+        about: '',
+        coverImage: '',
+        location: '',
+        name: '',
+        profileImage: '',
+        rep: ''
+    },
+    newPost: {
+        title: '',
+        body: '',
+        tags: ''
+    }
 };
