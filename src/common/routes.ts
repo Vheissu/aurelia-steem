@@ -2,7 +2,7 @@ import { PLATFORM } from 'aurelia-pal';
 
 export const ApplicationRoutes = [
     { route: ['', 'home'], name: 'home', moduleId: PLATFORM.moduleName('modules/home/home'), title: 'Home', nav: true },
-    { route: ':name', name: 'user', moduleId: PLATFORM.moduleName('modules/user/user'), title: 'User', nav: false },
+    { route: ':username', name: 'user', moduleId: PLATFORM.moduleName('modules/user/user'), title: 'User', nav: false },
     { route: 'bookmarks', name: 'bookmarks', moduleId: PLATFORM.moduleName('modules/bookmarks/bookmarks', 'bookmarks'), title: 'Bookmarks', nav: true },
     { route: 'drafts', name: 'drafts', moduleId: PLATFORM.moduleName('modules/drafts/drafts', 'drafts'), title: 'Drafts', nav: true },
     { route: 'replies', name: 'replies', moduleId: PLATFORM.moduleName('modules/replies/replies', 'replies'), title: 'Replies', nav: true },
