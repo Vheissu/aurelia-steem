@@ -1,0 +1,16 @@
+.user-card {
+    display: flex;
+    padding: 16px 0;
+}
+
+    .user-card__right {
+        margin-left: 16px;
+
+        & > a {
+            color: #000;
+            display: block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
