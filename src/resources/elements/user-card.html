@@ -1,0 +1,14 @@
+<template bindable="username, alt">
+    <div class="user-card">
+        <div class="user-card__left">
+            <a route-href="route: user; params.bind: { username: username }">
+                <avatar username.bind="username" size="60"></avatar>
+            </a>
+            <a route-href="route: user; params.bind: { username: username }">
+                <span class="username">${username}</span>
+            </a>
+            <span class="user-card__alt" if.bind="alt">${alt}</span>
+        </div>
+        <follow-button username.bind="username"></follow-button>
+    </div>
+</template>
