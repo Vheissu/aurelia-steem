@@ -1,4 +1,4 @@
-import steem from '../../steem';
+import * as steem from '@steemit/steem-js';
 
 export async function getTrendingCategories(after, limit = 20) {
     return new Promise((resolve, reject) => {

@@ -1,4 +1,4 @@
-import steem from '../../steem';
+import * as steem from '@steemit/steem-js';
 
 export async function getDiscussionsByTrending(query) {
     return new Promise((resolve, reject) => {

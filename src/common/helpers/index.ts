@@ -1,4 +1,4 @@
-import steem from '../steem';
+import * as steem from '@steemit/steem-js';
 
 export * from './steem/accounts';
 export * from './steem/actions';

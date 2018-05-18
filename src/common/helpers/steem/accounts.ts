@@ -1,4 +1,4 @@
-import steem from '../../steem';
+import * as steem from '@steemit/steem-js';
 
 export async function getAccounts(accounts = [ 'ned' ]): Promise<any> {
     return new Promise((resolve, reject) => {
