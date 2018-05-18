@@ -1,4 +1,4 @@
-<template bindable="username, profile, alt" class="user-card">
+<template bindable="username, profile, alt, context" class="user-card ${context ? 'user-card--' + context : ''}">
 
     <require from="./user-card.scss"></require>
 
