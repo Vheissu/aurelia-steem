@@ -1,10 +1,5 @@
-import {bindable} from 'aurelia-framework';
+import {bindable, containerless} from 'aurelia-framework';
 
 export class FollowButton {
-  @bindable value;
-
-  valueChanged(newValue, oldValue) {
-
-  }
+    @bindable username;
 }
-
