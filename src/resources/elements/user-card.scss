@@ -14,3 +14,12 @@
             text-decoration: none;
         }
     }
+
+// Profile page context
+.user-card--profile {
+    .user-card__right {
+        & > a {
+            font-size: 2.8rem;
+        }
+    }
+}
