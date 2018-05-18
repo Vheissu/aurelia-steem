@@ -1,4 +1,4 @@
-import { LOAD_TRENDING } from '../../common/store/constants';
+import { loadTrending } from 'common/store/actions';
 import { State } from '../../common/store/state';
 import { Store, connectTo } from 'aurelia-store';
 import { autoinject } from 'aurelia-dependency-injection';
@@ -9,8 +9,8 @@ import { computedFrom } from 'aurelia-binding';
 export class Home {
     public state: State;
 
-    constructor(private store: Store<State>) {
-        this.store.dispatch(LOAD_TRENDING);
+    constructor() {
+        loadTrending();
     }
 
     @computedFrom('state.posts')

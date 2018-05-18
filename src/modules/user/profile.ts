@@ -1,3 +1,4 @@
+import { loadAccount, loadFeed } from 'common/store/actions';
 import { LOAD_FEED, LOAD_ACCOUNT } from '../../common/store/constants';
 import { State } from '../../common/store/state';
 import { autoinject, computedFrom } from 'aurelia-framework';
@@ -14,16 +15,16 @@ export class Profile {
     }
 
     canActivate(params) {
-        if (typeof params.name === 'undefined') {
+        if (typeof params.username === 'undefined') {
             return new Redirect('/');
         }
     }
 
     async activate(params) {
-        const { name } = params;
+        const { username } = params;
 
-        await this.store.dispatch(LOAD_ACCOUNT, name);
-        await this.store.dispatch(LOAD_FEED, name);
+        await loadAccount(username);
+        await loadFeed(username);
     }
 
     @computedFrom('state.account')
