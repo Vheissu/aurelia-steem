@@ -3,6 +3,7 @@ export interface State {
     account: any;
     tags: any[];
     posts: any[];
+    wif: string;
     accessToken: string;
     tokenExpires: string;
     username: string;
@@ -27,6 +28,7 @@ export const initialState: State = {
     account: {},
     tags: [],
     posts: [],
+    wif: '',
     accessToken: '',
     tokenExpires: '',
     username: '',
