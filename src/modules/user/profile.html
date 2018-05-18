@@ -1,18 +1,19 @@
 <template>
-    <require from="resources/value-converters/reputation"></require>
+    <!-- <require from="resources/value-converters/reputation"></require> -->
 
     <header class="hero-header">
         <div class="container" layout="row center-left">
-            <div class="hero-header__left">
+            <user-card username.bind="user.name" profile.bind="profile"></user-card>
+            <!-- <div class="hero-header__left">
                 <img class="avatar avatar--large" src="https://img.busy.org/@${user.name}">
             </div>
 
             <div class="hero-header__right">
-                <h3 class="hero-header__username">${user.name} (${user.reputation | reputation})
+                <h3 class="hero-header__username">${user.name} (${user.reputation})
                     <a href="#" class="button button--small button--follow">Follow</a>
                 </h3>
                 <p class="hero-header__blurb">${profile.about}</p>
-            </div>
+            </div> -->
         </div>
     </header>
 
