@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Spectral:400,400i,700,700i');
+
 @import "./config/index";
 @import "./functions/index";
-@import "./grid/reflex";
+@import "./partials/grid";
 
 @import "./partials/index";
 
@@ -24,8 +26,19 @@ body {
   font-family: $sans-serif-font-family;
 }
 
+p {
+    font-family: $serif-font-family
+}
+
 router-view {
     display: block;
     margin-top: $main-header-height;
 }
+
+.main-content {
+    background: #FFF;
+}
+
+@import "./pages/content";
+
 @import "./flex-layout-attribute.min.css";
