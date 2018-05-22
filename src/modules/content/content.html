@@ -1,3 +1,12 @@
 <template>
-
+    <article class="container content-article" if.bind="post.title">
+        <div class="row">
+            <div class="col-sm-6"><h1 class="content-article__heading">${post.title}</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="content-article__body" innerhtml.bind="post.body"></div>
+            </div>
+        </div>
+    </article>
 </template>
