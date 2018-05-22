@@ -1,5 +1,5 @@
 .main-header {
-  background: #FFFFFF;
+  background: $header-bg-colour;
   border-bottom: 1px solid #e9e7e7;
   box-shadow: 0 0 4px rgba(0, 0, 0, .05);
   font-size: 1.6rem;
@@ -24,6 +24,11 @@
     font-size: 2rem;
     font-weight: bold;
     width: 165px;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 
 .main-header__links {
